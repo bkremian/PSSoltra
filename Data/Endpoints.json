@@ -1,0 +1,768 @@
+[
+  {
+    "Name": "GetUsers",
+    "Path": "/api/users/",
+    "Method": "Get",
+    "Headers": {
+      "Accept": "application/json"
+    },
+    "Description": "Get all users",
+    "Parameters": [
+      {
+        "Dynamic": "FirstName",
+        "Name": "first_name",
+        "Type": "string",
+        "In": [
+          "query"
+        ],
+        "Required": false,
+        "Description": "First name of user"
+      },
+      {
+        "Dynamic": "LastName",
+        "Name": "last_name",
+        "Type": "string",
+        "In": [
+          "query"
+        ],
+        "Required": false,
+        "Description": "Last name of user"
+      },
+      {
+        "Dynamic": "Username",
+        "Name": "username",
+        "Type": "string",
+        "In": [
+          "query"
+        ],
+        "Required": false,
+        "Description": "User's username"
+      },
+      {
+        "Dynamic": "Email",
+        "Name": "email",
+        "Type": "string",
+        "In": [
+          "query"
+        ],
+        "Required": false,
+        "Description": "User's email address"
+      },
+      {
+        "Dynamic": "IsActive",
+        "Name": "is_active",
+        "Type": "bool",
+        "In": [
+          "query"
+        ],
+        "Required": false,
+        "Description": "Active status of user"
+      }
+    ]
+  },
+  {
+    "Name": "GetUser",
+    "Path": "/api/users/<id>/",
+    "Method": "Get",
+    "Headers": {
+      "Accept": "application/json"
+    },
+    "Description": "Get single user",
+    "Parameters": [
+      {
+        "Dynamic": "Id",
+        "Name": "<id>",
+        "Type": "string",
+        "In": [
+          "path"
+        ],
+        "Required": true,
+        "Description": "User Id"
+      }
+    ]
+  },
+  {
+    "Name": "NewUser",
+    "Path": "/api/users/",
+    "Method": "Post",
+    "Headers": {
+      "Accept": "application/json",
+      "ContentType": "application/json"
+    },
+    "Description": "Create user",
+    "Parameters": [
+      {
+        "Dynamic": "Username",
+        "Name": "username",
+        "Type": "string",
+        "In": [
+          "body"
+        ],
+        "Required": true,
+        "Description": "User's username"
+      },
+      {
+        "Dynamic": "Password",
+        "Name": "password",
+        "Type": "string",
+        "In": [
+          "body"
+        ],
+        "Required": true,
+        "Description": "User's password"
+      },
+      {
+        "Dynamic": "FirstName",
+        "Name": "first_name",
+        "Type": "string",
+        "In": [
+          "body"
+        ],
+        "Required": true,
+        "Description": "First name of user"
+      },
+      {
+        "Dynamic": "LastName",
+        "Name": "last_name",
+        "Type": "string",
+        "In": [
+          "body"
+        ],
+        "Required": true,
+        "Description": "Last name of user"
+      },
+      {
+        "Dynamic": "Email",
+        "Name": "email",
+        "Type": "string",
+        "In": [
+          "body"
+        ],
+        "Required": true,
+        "Description": "User's email address"
+      },
+      {
+        "Dynamic": "Description",
+        "Name": "description",
+        "Type": "string",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "Description of user"
+      },
+      {
+        "Dynamic": "IsActive",
+        "Name": "is_active",
+        "Type": "bool",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "Active status of user"
+      },
+      {
+        "Dynamic": "IsSuperuser",
+        "Name": "is_superuser",
+        "Type": "bool",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "Super user status of user"
+      },
+      {
+        "Dynamic": "IsStaff",
+        "Name": "is_staff",
+        "Type": "bool",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "Staff status of user"
+      },
+      {
+        "Dynamic": "CanInbox",
+        "Name": "can_inbox",
+        "Type": "bool",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "Inbox status of user"
+      },
+      {
+        "Dynamic": "AllowRestAccess",
+        "Name": "allow_rest_access",
+        "Type": "bool",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "Rest access status of user"
+      },
+      {
+        "Dynamic": "Organization",
+        "Name": "organization",
+        "Type": "string",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "User organization"
+      },
+      {
+        "Dynamic": "Memberships",
+        "Name": "memberships",
+        "Type": "array",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "User memberships"
+      }
+    ]
+  },
+  {
+    "Name": "EditUser",
+    "Path": "/api/users/<id>/",
+    "Method": "Patch",
+    "Headers": {
+      "Accept": "application/json",
+      "ContentType": "application/json"
+    },
+    "Description": "Update user",
+    "Parameters": [
+      {
+        "Dynamic": "Id",
+        "Name": "<id>",
+        "Type": "string",
+        "In": [
+          "path"
+        ],
+        "Required": true,
+        "Description": "User Id"
+      },
+      {
+        "Dynamic": "Username",
+        "Name": "username",
+        "Type": "string",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "User's username"
+      },
+      {
+        "Dynamic": "FirstName",
+        "Name": "first_name",
+        "Type": "string",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "First name of user"
+      },
+      {
+        "Dynamic": "LastName",
+        "Name": "last_name",
+        "Type": "string",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "Last name of user"
+      },
+      {
+        "Dynamic": "Email",
+        "Name": "email",
+        "Type": "string",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "User's email address"
+      },
+      {
+        "Dynamic": "Description",
+        "Name": "description",
+        "Type": "string",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "Description of user"
+      },
+      {
+        "Dynamic": "IsActive",
+        "Name": "is_active",
+        "Type": "bool",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "Active status of user"
+      },
+      {
+        "Dynamic": "IsSuperuser",
+        "Name": "is_superuser",
+        "Type": "bool",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "Super user status of user"
+      },
+      {
+        "Dynamic": "IsStaff",
+        "Name": "is_staff",
+        "Type": "bool",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "Staff status of user"
+      },
+      {
+        "Dynamic": "CanInbox",
+        "Name": "can_inbox",
+        "Type": "bool",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "Inbox status of user"
+      },
+      {
+        "Dynamic": "AllowRestAccess",
+        "Name": "allow_rest_access",
+        "Type": "bool",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "Rest access status of user"
+      },
+      {
+        "Dynamic": "Organization",
+        "Name": "organization",
+        "Type": "string",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "User organization"
+      },
+      {
+        "Dynamic": "Memberships",
+        "Name": "memberships",
+        "Type": "array",
+        "In": [
+          "body"
+        ],
+        "Required": false,
+        "Description": "User memberships"
+      }
+    ]
+  },
+  {
+    "Name": "RemoveUser",
+    "Path": "/api/users/<id>/",
+    "Method": "Delete",
+    "Headers": {
+      "Accept": "application/json"
+    },
+    "Description": "Delete user",
+    "Parameters": [
+      {
+        "Dynamic": "Id",
+        "Name": "<id>",
+        "Type": "string",
+        "In": [
+          "path"
+        ],
+        "Required": true,
+        "Description": "User Id"
+      }
+    ]
+  },
+  {
+    "Name": "GetTokens",
+    "Path": "/api/users/<id>/tokens/",
+    "Method": "Get",
+    "Headers": {
+      "Accept": "application/json"
+    },
+    "Description": "Get all user tokens",
+    "Parameters": [
+      {
+        "Dynamic": "Id",
+        "Name": "<id>",
+        "Type": "string",
+        "In": [
+          "path"
+        ],
+        "Required": true,
+        "Description": "User Id"
+      }
+    ]
+  },
+  {
+    "Name": "GetToken",
+    "Path": "/api/users/<id>/tokens/<token>/",
+    "Method": "Get",
+    "Headers": {
+      "Accept": "application/json"
+    },
+    "Description": "Retrieve single token",
+    "Parameters": [
+      {
+        "Dynamic": "Id",
+        "Name": "<id>",
+        "Type": "string",
+        "In": [
+          "path"
+        ],
+        "Required": true,
+        "Description": "User Id"
+      },
+      {
+        "Dynamic": "Token",
+        "Name": "<token>",
+        "Type": "string",
+        "In": [
+          "path"
+        ],
+        "Required": true,
+        "Description": "Token Id"
+      }
+    ]
+  },
+  {
+    "Name": "NewToken",
+    "Path": "/api/users/<id>/tokens/",
+    "Method": "Post",
+    "Headers": {
+      "Accept": "application/json",
+      "ContentType": "application/json"
+    },
+    "Description": "Create token",
+    "Parameters": [
+      {
+        "Dynamic": "Id",
+        "Name": "<id>",
+        "Type": "string",
+        "In": [
+          "path"
+        ],
+        "Required": true,
+        "Description": "User Id"
+      },
+      {
+        "Dynamic": "Title",
+        "Name": "title",
+        "Type": "string",
+        "In": [
+          "body"
+        ],
+        "Required": true,
+        "Description": "Token title"
+      }
+    ]
+  },
+  {
+    "Name": "EditToken",
+    "Path": "/api/users/<id>/tokens/<token>/",
+    "Method": "Patch",
+    "Headers": {
+      "Accept": "application/json",
+      "ContentType": "application/json"
+    },
+    "Description": "Update token",
+    "Parameters": [
+      {
+        "Dynamic": "Id",
+        "Name": "<id>",
+        "Type": "string",
+        "In": [
+          "path"
+        ],
+        "Required": true,
+        "Description": "User Id"
+      },
+      {
+        "Dynamic": "Token",
+        "Name": "<token>",
+        "Type": "string",
+        "In": [
+          "path"
+        ],
+        "Required": true,
+        "Description": "Token Id"
+      },
+      {
+        "Dynamic": "Active",
+        "Name": "active",
+        "Type": "bool",
+        "In": [
+          "body"
+        ],
+        "Required": true,
+        "Description": "Active status of token"
+      }
+    ]
+  },
+  {
+    "Name": "RemoveToken",
+    "Path": "/api/users/<id>/tokens/<token>/",
+    "Method": "Delete",
+    "Headers": {
+      "Accept": "application/json"
+    },
+    "Description": "Delete token",
+    "Parameters": [
+      {
+        "Dynamic": "Id",
+        "Name": "<id>",
+        "Type": "string",
+        "In": [
+          "path"
+        ],
+        "Required": true,
+        "Description": "User Id"
+      },
+      {
+        "Dynamic": "Token",
+        "Name": "<token>",
+        "Type": "string",
+        "In": [
+          "path"
+        ],
+        "Required": true,
+        "Description": "Token Id"
+      }
+    ]
+  },
+  {
+    "Name": "GetHistory",
+    "Path": "/api/users/<id>/history/",
+    "Method": "Get",
+    "Headers": {
+      "Accept": "application/json"
+    },
+    "Description": "Get all user access history",
+    "Parameters": [
+      {
+        "Dynamic": "Id",
+        "Name": "<id>",
+        "Type": "string",
+        "In": [
+          "path"
+        ],
+        "Required": true,
+        "Description": "User Id"
+      }
+    ]
+  },
+  {
+    "Name": "SearchStix",
+    "Path": "/api/stix/",
+    "Method": "Get",
+    "Headers": {
+      "Accept": "application/json"
+    },
+    "Description": "Search STIX",
+    "Parameters": [
+      {
+        "Dynamic": "Query",
+        "Name": "q",
+        "Type": "string",
+        "In": [
+          "query"
+        ],
+        "Required": false,
+        "Description": "A full text search query field"
+      },
+      {
+        "Dynamic": "Type",
+        "Name": "type",
+        "Type": "string",
+        "In": [
+          "query"
+        ],
+        "Required": false,
+        "Enum": [
+          "ind",
+          "obs",
+          "act",
+          "ttp",
+          "cam",
+          "inc",
+          "coa",
+          "tgt",
+          "pkg"
+        ],
+        "Description": "Short form STIX types"
+      },
+      {
+        "Dynamic": "Subtype",
+        "Name": "subtype",
+        "Type": "string",
+        "In": [
+          "query"
+        ],
+        "Required": false,
+        "Description": "Indicator STIX types ('IP Watchlist')"
+      },
+      {
+        "Dynamic": "Tlp",
+        "Name": "tlp",
+        "Type": "string",
+        "In": [
+          "query"
+        ],
+        "Required": false,
+        "Enum": [
+          "none",
+          "white",
+          "green",
+          "amber",
+          "red"
+        ],
+        "Description": "TLP color ('white', 'green', 'amber','red')"
+      },
+      {
+        "Dynamic": "Ns",
+        "Name": "ns",
+        "Type": "string",
+        "In": [
+          "query"
+        ],
+        "Required": false,
+        "Description": "Namespace to search"
+      },
+      {
+        "Dynamic": "Year",
+        "Name": "year",
+        "Type": "int",
+        "In": [
+          "query"
+        ],
+        "Required": false,
+        "Min": 1970,
+        "Max": 9999,
+        "Description": "Four digit year"
+      },
+      {
+        "Dynamic": "Month",
+        "Name": "month",
+        "Type": "int",
+        "In": [
+          "query"
+        ],
+        "Required": false,
+        "Min": 1,
+        "Max": 12,
+        "Description": "Two digit month"
+      },
+      {
+        "Dynamic": "Day",
+        "Name": "day",
+        "Type": "int",
+        "In": [
+          "query"
+        ],
+        "Required": false,
+        "Min": 1,
+        "Max": 31,
+        "Description": "Two digit day"
+      },
+      {
+        "Dynamic": "Skip",
+        "Name": "skip",
+        "Type": "string",
+        "In": [
+          "query"
+        ],
+        "Required": false,
+        "Description": "Position to begin retrieving results"
+      }
+    ]
+  },
+  {
+    "Name": "GetStix",
+    "Path": "/api/stix/<id>/",
+    "Method": "Get",
+    "Headers": {
+      "Accept": "application/json",
+      "ContentType": "application/json"
+    },
+    "Description": "Retrieve a single STIX object",
+    "Parameters": [
+      {
+        "Dynamic": "Id",
+        "Name": "<id>",
+        "Type": "string",
+        "In": [
+          "path"
+        ],
+        "Required": true,
+        "Description": "STIX Id"
+      },
+      {
+        "Dynamic": "Skip",
+        "Name": "skip",
+        "Type": "string",
+        "In": [
+          "query"
+        ],
+        "Required": false,
+        "Description": "Position to begin retrieving results"
+      }
+    ]
+  },
+  {
+    "Name": "GetRelated",
+    "Path": "/api/stix/<id>/related/",
+    "Method": "Get",
+    "Headers": {
+      "Accept": "application/json",
+      "ContentType": "application/json"
+    },
+    "Description": "Get all related objects from a STIX object",
+    "Parameters": [
+      {
+        "Dynamic": "Id",
+        "Name": "<id>",
+        "Type": "string",
+        "In": [
+          "path"
+        ],
+        "Required": true,
+        "Description": "STIX Id"
+      }
+    ]
+  },
+  {
+    "Name": "UploadStix",
+    "Path": "/api/upload/",
+    "Method": "Get",
+    "Headers": {
+      "Accept": "application/json",
+      "ContentType": "application/json"
+    },
+    "Description": "Upload STIX package",
+    "Parameters": [
+      {
+        "Dynamic": "File",
+        "Name": "file",
+        "Type": "string",
+        "In": [
+          "formdata"
+        ],
+        "Required": true,
+        "Description": "Path to STIX XML file"
+      }
+    ]
+  }
+]
