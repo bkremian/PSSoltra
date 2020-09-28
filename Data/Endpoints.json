@@ -629,7 +629,7 @@
           "amber",
           "red"
         ],
-        "Description": "TLP color ('white', 'green', 'amber','red')"
+        "Description": "TLP color"
       },
       {
         "Dynamic": "Ns",

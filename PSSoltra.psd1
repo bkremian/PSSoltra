@@ -12,7 +12,7 @@
 RootModule = 'PSSoltra.psm1'
 
 # Version number of this module.
-ModuleVersion = '1.0.1'
+ModuleVersion = '1.0.2'
 
 # Supported PSEditions
 CompatiblePSEditions = @('Desktop','Core')
@@ -112,8 +112,9 @@ PrivateData = @{
 
         # ReleaseNotes of this module
         ReleaseNotes = "
-        Version 1.0.1:
-          Added License and Project URIs
+        Version 1.0.2:
+          Updated Get-Dictionary and Get-DynamicHelp functions to improve the
+          -Help information for each command
         "
 
         # Prerelease string of this module
